@@ -5,7 +5,7 @@ import Row from "../../ui/Row";
 import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
-import CheckBox from "../../ui/CheckBox";
+import Checkbox from "../../ui/Checkbox";
 import ButtonText from "../../ui/ButtonText";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
@@ -61,7 +61,7 @@ function CheckinBooking() {
         <BookingDataBox booking={data} />
 
         <Box>
-          <CheckBox
+          <Checkbox
             checked={confirmPaid}
             onChange={() => setConfirmPaid((confirm) => !confirm)}
             disabled={confirmPaid}
@@ -69,7 +69,7 @@ function CheckinBooking() {
           >
             I confirm that {data.guests.fullName} has made a full payment of{" "}
             {formatCurrency(data.totalPrice)}
-          </CheckBox>
+          </Checkbox>
         </Box>
 
         <ButtonGroup>
